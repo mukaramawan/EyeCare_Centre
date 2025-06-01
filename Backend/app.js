@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 const EMAIL_USER = process.env.EMAIL_USER;
 const EMAIL_PASS = process.env.EMAIL_PASS;
-const RECEIVER_EMAIL = 'mukaramawan.official@gmail.com'; // Hospital's email address
+const RECEIVER_EMAIL = 'mukaramawan@gmail.com'; // Hospital's email address
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
