@@ -1,0 +1,182 @@
+:root {
+    --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Poppins",  sans-serif;
+    --nav-font: "Raleway",  sans-serif;
+  }
+  
+  :root { 
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #2c4964; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #1977cc; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #2c4964;  /* The default color of the main navmenu links */
+    --nav-hover-color: #1977cc; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #2c4964; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #1977cc; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+  :root {
+    scroll-behavior: smooth;
+  }
+
+
+
+
+  
+body {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+  }
+  
+  a {
+    color: gray;
+    text-decoration: none;
+    transition: 0.0s;
+  }
+  
+  a:hover {
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    text-decoration: none;
+    border-style: inset;
+    border: - var(-nav-hover-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  
+  }
+  
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+  }
+.header {
+    color: var(--default-color);
+    transition: all 0.5s;
+    z-index: 997;
+    background-color: var(--background-color);
+  }
+  
+  .header .topbar {
+    background-color: var(--accent-color);
+    height: 40px;
+    padding: 0;
+    font-size: 14px;
+    transition: all 0.5s;
+  }
+  
+  .header .topbar .contact-info i {
+    font-style: normal;
+    color: var(--contrast-color);
+  }
+  
+  .header .topbar .contact-info i a,
+  .header .topbar .contact-info i span {
+    padding-left: 5px;
+    color: var(--contrast-color);
+  }
+  @media (max-width: 575px) {
+
+    .header .topbar .contact-info i a,
+    .header .topbar .contact-info i span {
+      font-size: 13px;
+    }
+  }
+  
+  .header .topbar .contact-info i a {
+    line-height: 0;
+    transition: 0.3s;
+  }
+  
+  .header .topbar .contact-info i a:hover {
+    color: var(--contrast-color);
+    text-decoration: underline;
+  }
+  
+  .header .topbar .social-links a {
+    color: color-mix(in srgb, var(--contrast-color), transparent 40%);
+    line-height: 0;
+    transition: 0.3s;
+    margin-left: 20px;
+  }
+  
+  .header .topbar .social-links a:hover {
+    color: var(--contrast-color);
+  }
+  
+  .header .branding {
+    min-height: 60px;
+    padding: 10px 0;
+  }
+  
+  .header .logo {
+    line-height: 1;
+  }
+  
+  .header .logo img {
+    max-height: 36px;
+    margin-right: 8px;
+  }
+  
+  .header .logo h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+    color: var(--heading-color);
+  }
+  
+  .header .cta-btn,
+  .header .cta-btn:focus {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    font-size: 14px;
+    padding: 8px 25px;
+    margin: 0 0 0 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  
+  .header .cta-btn:hover,
+  .header .cta-btn:focus:hover {
+    color: var(--contrast-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  }
+  
+  @media (max-width: 1200px) {
+    .header .logo {
+      order: 1;
+    }
+  
+    .header .cta-btn {
+      order: 2;
+      margin: 0 15px 0 0;
+      padding: 6px 15px;
+    }
+  
+    .header .navmenu {
+      order: 3;
+    }
+  }
+  
+  .scrolled .header {
+    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scrolled .header .topbar {
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
